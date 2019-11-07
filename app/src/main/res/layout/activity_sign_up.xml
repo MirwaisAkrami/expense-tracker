@@ -8,8 +8,8 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="295dp"
-        android:layout_height="375dp"
+        android:layout_width="315dp"
+        android:layout_height="571dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,21 +27,68 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/name"
+            android:layout_marginBottom="-71dp"
+            android:ems="10"
+            android:hint="Age"
+            android:inputType="number" />
+
+
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/age"
+            android:layout_marginBottom="-72dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="20dp" />
+
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/gender"
             android:layout_marginBottom="-61dp"
             android:ems="10"
             android:hint="email"
             android:inputType="textEmailAddress" />
 
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/email"
+            android:layout_marginBottom="-71dp"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName" />
+
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/email"
-            android:layout_marginBottom="-59dp"
+            android:layout_alignBottom="@+id/username"
+            android:layout_marginBottom="-67dp"
             android:ems="10"
             android:hint="password"
             android:inputType="textPassword" />
@@ -51,17 +98,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/password"
-            android:layout_marginBottom="-63dp"
+            android:layout_marginBottom="-68dp"
             android:ems="10"
             android:hint="retype password"
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:text="Button" />
+
+
 
     </RelativeLayout>
 
