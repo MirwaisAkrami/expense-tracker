@@ -55,15 +55,7 @@ public class ExpenseListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_expense_list, container, false);
-        FloatingActionButton floatButton = (FloatingActionButton) view.findViewById(R.id.floatingActionButton);
 
-        floatButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), NewExpenseActivity.class);
-                startActivity(intent);
-            }
-        });
 
         ButterKnife.inject(this, view);
 

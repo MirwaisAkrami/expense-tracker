@@ -3,6 +3,7 @@ package com.example.expensetracker.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -57,11 +58,14 @@ public class LoginActivity extends AppCompatActivity {
                         // usersList.add(u.getKey());
                         loggedInUser = u.getValue(User.class);
                         Log.d("Username: ", "onDataChange: " + loggedInUser.getMail());
+                        Log.d("Username: ", "onDataChange: " + loggedInUser.getPassword());
                     }
 
                     if(loggedInUser.getPassword().equals(password.getText().toString())) {
                         Toast.makeText(LoginActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
                         storeCredentialsLocally();
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
                     } else {
                         Toast.makeText(LoginActivity.this, "Incorrect Username or Password", Toast.LENGTH_SHORT).show();
                     }

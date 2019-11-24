@@ -8,13 +8,16 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.ListFragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.expensetracker.R;
 import com.example.expensetracker.fragments.ExpenseListFragment;
 import com.example.expensetracker.fragments.SettingFragment;
 import com.example.expensetracker.fragments.StatFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -50,6 +53,16 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        FloatingActionButton floatButton = (FloatingActionButton) findViewById(R.id.add_new_expense);
+
+        floatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NewExpenseActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
