@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.ListFragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.example.expensetracker.R;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.bars,
             R.drawable.settings
     };
+    private  static SharedPreferences prefs;
+
 
 
     @Override
@@ -47,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+
 
 
         setupTabIcons();
@@ -100,4 +105,6 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
     }
+
+
 }

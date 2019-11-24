@@ -73,21 +73,12 @@
             android:inputType="textEmailAddress" />
 
 
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/email"
-            android:layout_marginBottom="-71dp"
-            android:ems="10"
-            android:hint="Username"
-            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/username"
+            android:layout_alignBottom="@+id/email"
             android:layout_marginBottom="-67dp"
             android:ems="10"
             android:hint="password"

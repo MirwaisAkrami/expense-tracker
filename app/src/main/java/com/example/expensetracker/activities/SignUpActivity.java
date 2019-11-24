@@ -43,8 +43,6 @@ public class SignUpActivity extends AppCompatActivity {
     EditText name;
     @InjectView(R.id.email)
     EditText email;
-    @InjectView(R.id.username)
-    EditText username;
     @InjectView(R.id.gender)
     RadioGroup genderGroup;
     @InjectView(R.id.password)
@@ -97,20 +95,19 @@ public class SignUpActivity extends AppCompatActivity {
     @OnClick(R.id.signup)
     public void signUp() {
        
-        if(!usersList.contains(username.getText().toString())) {
+        if(!usersList.contains(email.getText().toString())) {
             User user = new User(
                     name.getText().toString(),
                     email.getText().toString(),
-                    username.getText().toString(),
                     gender.toLowerCase(),
                     password.getText().toString(),
                     Integer.parseInt(age.getText().toString())
             );
             
-            myRef.child(user.getUsername()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+            myRef.child(user.getMail()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    Log.d("Sign Up", "onComplete: Added User " + username.getText().toString());
+                    Log.d("Sign Up", "onComplete: Added User " + email.getText().toString());
                 }
             });
 
