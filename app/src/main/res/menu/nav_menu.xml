@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+<!--    <group>-->
+<!--        <item-->
+<!--            android:id="@+id/nav_list"-->
+<!--            app:showAsAction="ifRoom"-->
+<!--            android:enabled="true"-->
+<!--            android:icon="@drawable/ic_list"-->
+<!--            android:title="List" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_stat"-->
+<!--            app:showAsAction="ifRoom"-->
+<!--            android:enabled="true"-->
+<!--            android:icon="@drawable/ic_statistics"-->
+<!--            android:title="Stats" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_analysis"-->
+<!--            app:showAsAction="ifRoom"-->
+<!--            android:enabled="true"-->
+<!--            android:icon="@drawable/ic_chart_analysis"-->
+<!--            android:title="Analysis" />-->
+<!--    </group>-->
+    <group>
+        <item
+            android:id="@+id/about_us"
+            app:showAsAction="ifRoom"
+            android:enabled="true"
+            android:icon="@drawable/ic_info"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/help"
+            app:showAsAction="ifRoom"
+            android:enabled="true"
+            android:icon="@drawable/ic_help"
+            android:title="Help Center" />
+
+        <item
+            android:id="@+id/logout"
+            app:showAsAction="ifRoom"
+            android:enabled="true"
+            android:icon="@drawable/ic_exit"
+            android:title="Logout" />
+
+    </group>
+
+
+
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <item
+        android:id="@+id/nav_list"
+        android:enabled="true"
+        android:icon="@drawable/ic_list"
+        android:title="List"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_stat"
+        android:enabled="true"
+        android:icon="@drawable/ic_statistics"
+        android:title="Stats"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_analysis"
+        android:enabled="true"
+        android:icon="@drawable/ic_chart_analysis"
+        android:title="Analysis"
+        app:showAsAction="ifRoom" />
+
+</menu>

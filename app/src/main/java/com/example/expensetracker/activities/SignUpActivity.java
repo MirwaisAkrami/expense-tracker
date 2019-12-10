@@ -3,8 +3,10 @@ package com.example.expensetracker.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -89,6 +91,12 @@ public class SignUpActivity extends AppCompatActivity {
                 Toast.makeText(SignUpActivity.this, "Gender Value: " + gender, Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @OnClick(R.id.login_link)
+    public void login(View v) {
+        Intent intent  = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
 

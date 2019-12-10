@@ -1,10 +1,17 @@
 package com.example.expensetracker.adapters;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.expensetracker.R;
@@ -17,12 +24,14 @@ public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ExpenseV
 
     public class ExpenseViewHolder extends RecyclerView.ViewHolder {
         public TextView amount, description, address;
+        public ImageView expenseType;
 
         public ExpenseViewHolder(View view) {
             super(view);
             amount = (TextView) view.findViewById(R.id.exp_amount);
             description = (TextView) view.findViewById(R.id.exp_description);
             address = (TextView) view.findViewById(R.id.exp_address);
+            expenseType = (ImageView) view.findViewById(R.id.exp_type);
         }
     }
 
@@ -43,6 +52,13 @@ public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ExpenseV
         holder.amount.setText(expense.getAmount().toString());
         holder.description.setText(expense.getDescription());
         holder.address.setText(expense.getAddress());
+
+//        holder.expenseType.setBackgroundResource(R.drawable.ic_phone_iphone_white_24dp);
+
+        Drawable imageBg = holder.expenseType.getBackground();
+        GradientDrawable shDrawable = (GradientDrawable) imageBg;
+//        shDrawable.setColor(holder.expenseType.getResources().getColor(R.color.colorAccentDarker));
+        shDrawable.setColor(Color.parseColor("#FFD044"));
     }
 
     @Override

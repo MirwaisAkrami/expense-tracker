@@ -3,18 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
     tools:context=".activities.SplashScreenActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="238dp"
-        android:layout_height="209dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_expensive" />
+        android:contentDescription="app icon"
+        app:srcCompat="@drawable/ic_exp_white" />
 </androidx.constraintlayout.widget.ConstraintLayout>

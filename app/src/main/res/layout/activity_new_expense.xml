@@ -48,7 +48,8 @@
 
             android:id="@+id/add_expense"
             android:layout_marginTop="42dp"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorSecondary"
+            android:textColor="@color/colorSupport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Button" />
